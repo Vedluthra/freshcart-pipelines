@@ -15,9 +15,9 @@ except ImportError:
 
 @transformer
 def transform(df, *args, **kwargs):
-    """Add a deterministic 70/30 train/test split label to the input DataFrame."""
+    """Add a deterministic 80/20 train/test split label to the input DataFrame."""
     train_df, test_df = train_test_split(
-        df, test_size=0.3, random_state=42
+        df, test_size=0.2, random_state=42
     )
 
     train_df = train_df.copy()
