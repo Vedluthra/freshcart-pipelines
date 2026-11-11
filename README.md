@@ -51,3 +51,19 @@ See `.github/workflows/ci.yml`.
 - A fixing commit restoring `test_size=0.2`, followed by a green run.
 
 Do not commit `.env`, credentials, generated CSV/model files, virtual environments, or logs.
+
+## Continuous Integration
+
+This project uses GitHub Actions for automated testing.
+
+The CI workflow:
+- Runs whenever code is pushed to the main branch.
+- Sets up Python 3.12.
+- Installs dependencies from requirements.txt.
+- Executes pytest.
+- Reports whether the tests pass or fail.
+
+The test suite validates the 80:20 train-test split
+of the Iris dataset, ensuring 120 training records
+and 30 testing records.
+
