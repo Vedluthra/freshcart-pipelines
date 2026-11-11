@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+*.pkl
+*.csv
+mage.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.coverage
+htmlcov/
