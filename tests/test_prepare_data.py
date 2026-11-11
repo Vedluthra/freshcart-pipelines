@@ -10,3 +10,12 @@ def test_split_is_80_20():
     assert (out["split"] == "train").sum() == 120
     assert (out["split"] == "test").sum() == 30
     assert len(out) == 150
+
+
+def test_split_is_reproducible():
+    df = load_iris(as_frame=True).frame
+
+    out1 = transform(df)
+    out2 = transform(df)
+
+    assert out1.equals(out2)
